@@ -1,0 +1,172 @@
+@media screen and (min-width: 1200px) {
+	.main-container {
+		width: 1120px;
+	}
+	.card-container {
+		width: 80px;
+		height: 112px;
+	}
+	.card {
+		width: 80px;
+		height: 112px;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.main-container {
+		width: 746px;
+	}
+	.card-container {
+		width: 53px;
+		height: 75px;
+	}
+	.card {
+		width: 53px;
+		height: 75px;
+	}
+}
+.main-container {
+	margin-top: 100px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.header {
+	color: wheat;
+	margin-top: 20px;
+}
+.card {
+	border-radius: 8px;
+	box-shadow: 0 4px 8px black;
+	background-color: white;
+}
+
+.card-background {
+	background-image: url("./card_bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	/* border-radius: 8px;
+    box-shadow: 0 4px 8px black;
+    width: 80px;
+    height: 120px; */
+}
+body {
+	background-image: url("./background.jpg");
+	height: 100%;
+
+	background-position: center;
+	background-repeat: repeat;
+	background-size: cover;
+}
+
+.card-number {
+	font-size: large;
+	font-weight: bold;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.card-container {
+	perspective: 700px;
+	width: 80px;
+	height: 112px;
+	margin-right: auto !important;
+	margin-left: auto !important;
+}
+.found-pairs {
+	font-size: larger;
+	color: wheat;
+	font-weight: bold;
+}
+
+.card-flip,
+.card-container {
+	transform-style: preserve-3d;
+	transition: all 0.7s ease;
+	margin: 5px;
+}
+.card-flip {
+	height: 100%;
+	position: relative;
+}
+.card-flip div {
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+}
+.front {
+	z-index: 10;
+	position: absolute;
+}
+.back {
+	position: absolute;
+	z-index: 1;
+	transform: rotateY(-180deg);
+}
+
+.card-container.activated .card-flip {
+	transform: rotateY(180deg);
+}
+
+.col-1-5 {
+	flex: 0 0 12.3%;
+	max-width: 12.3% !important;
+	position: relative;
+	width: 100%;
+	padding-right: 15px !important;
+	padding-left: 15px !important;
+}
+
+.fade-out {
+	animation: fadeOut ease 4s;
+	-webkit-animation: fadeOut ease 4s;
+	-moz-animation: fadeOut ease 4s;
+	-o-animation: fadeOut ease 4s;
+	-ms-animation: fadeOut ease 4s;
+	animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-o-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
